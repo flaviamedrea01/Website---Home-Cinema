@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Schedule </title>
+<link rel="icon" href="icon.png" sizes="256x256" type="image/png"> 
+
+<link href="style.css" rel="stylesheet" type="text/css">
+
+<style>
+* {
+  box-sizing:border-box;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+.container {
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.rrow:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+img {
+  display: block;
+  height: 400px;
+  max-width: 100%;
+}
+  
+
+.filterDiv {
+border: 5px;
+border-color: white;
+  float: left; 
+  color: #ffffff;
+  width: 80%; 
+  height: 400px; 
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+ /* text-align: center;*/
+}
+
+.show {
+  display: block;
+}
+
+
+.btn {
+  font-family: georgia, serif;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+
+.b1 {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 15px;
+  margin: 4px 2px;
+  border-radius: 4px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div id="navbar">
+  <a href="#home"><a href='index.html' title='Home'>Home</a></a>
+  <a href="#movies"><a href='movies.html' title='Movies'>Movies</a></a>
+  <a href="#upcomingmovies"><a href='upcomingmovies.html' title='Upcoming Movies'>Upcoming Movies</a></a>
+  <a href="#schedule"><a href='schedule.html' title='Schedule'>Schedule</a></a>
+  <a href="#booking"><a href='makeareservation.php' title='Make a reservation'>Make a reservation</a></a>
+ </div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1><pers1><div style="text-align:center; font-size: 50pt;">Schedule</div></pers1></h1> 
+<br>
+<div class="container">
+<div id="myBtnContainer">
+
+  <br> <br>
+  
+ 
+ 
+  <button class="btn active" onclick="filterSelection('all')"> Show<br> all</button>
+  <button class="btn" onclick="filterSelection('monday')"> Monday<br> 29.11.2021</button>
+  <button class="btn" onclick="filterSelection('tuesday')"> Tuesday<br> 30.11.2021</button>
+  <button class="btn" onclick="filterSelection('wednesday')"> Wednesday<br> 01.12.2021</button>
+  <button class="btn" onclick="filterSelection('thursday')"> Thurday<br> 02.12.2021</button>
+  <button class="btn" onclick="filterSelection('friday')"> Friday<br> 03.12.2021</button>
+  <button class="btn" onclick="filterSelection('saturday')"> Saturday<br> 04.12.2021</button>
+  <button class="btn" onclick="filterSelection('sunday')"> Sunday<br> 05.12.2021</button><br>
+ 
+</div>
+
+</div>
+
+<div class="container" >
+<div class="filterDiv monday tuesday friday sunday ">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="luca.jpg">
+    </div>
+    <div class="column-66">
+	<br>
+       <p><div style="text-align:justify; font-size: 20px;">Monday 29.11.2021</div>
+      <button class="b1">5:30pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  
+	   <p><div style="text-align:justify; font-size: 20px;">Tuesday 30.11.2021</div>
+      <button class="b1">5:30pm</button>
+	  <br>
+	  
+	   <p><div style="text-align:justify; font-size: 20px;">Friday 03.12.2021</div>
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  
+	   <p><div style="text-align:justify; font-size: 20px;">Sunday 05.12.2021</div>
+	  <button class="b1">6:30pm</button>
+	  <button class="b1">8:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+
+<div class="filterDiv tuesday wednesday thursday sunday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="bossbaby.jpg">
+    </div>
+    <div class="column-66">
+	<br>
+       <p><div style="text-align:justify; font-size: 20px;">Tuesday 30.11.2021</div>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  
+	   <p><div style="text-align:justify; font-size: 20px;">Wednesday 01.12.2021</div>
+      <button class="b1">5:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  
+	   <p><div style="text-align:justify; font-size: 20px;">Thursday 02.12.2021</div>
+      <button class="b1">5:30pm</button>
+	  <button class="b1">7:30pm</button>
+	  <br>
+	  
+	   <p><div style="text-align:justify; font-size: 20px;">Sunday 05.12.2021</div>
+      <button class="b1">4:00pm</button>
+	  <button class="b1">5:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+
+<div class="filterDiv friday saturday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="notimetodie.jpg">
+    </div>
+    <div class="column-66">
+	<br>
+      <p><div style="text-align:justify; font-size: 20px;">Friday 03.12.2021</div>
+      <button class="b1">5:30pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Saturday 04.12.2021</div>
+	  <button class="b1">8:00pm</button>
+	  <br>
+	 
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv monday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="addams.jpg">
+    </div>
+    <div class="column-66">
+	<br>
+      <p><div style="text-align:justify; font-size: 20px;">Monday 29.11.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv monday thursday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="persian.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Monday 29.11.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Thursday 30.11.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">9:00pm</button>
+	
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv monday tuesday wednesday thursday friday saturday sunday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="venom.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Everyday</div>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	 
+    </div>
+  </div>
+  
+  </div>
+
+
+
+<div class="filterDiv monday sunday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="duel.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Monday 29.11.2021</div>
+      
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Sunday 05.12.2021</div>
+      
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+
+<div class="filterDiv friday saturday sunday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="ladder.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Friday 03.12.2021</div>
+      
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Saturday 04.12.2021</div>
+     
+	  <button class="b1">6:00pm</button>
+	 
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Sunday 05.12.2021</div>
+     
+	  <button class="b1">9:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv friday saturday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="dune.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Friday 03.12.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Saturday 04.12.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">6:00pm</button>
+	 
+	  <button class="b1">9:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+
+<div class="filterDiv sunday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="ron.jpeg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Sunday 05.12.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">6:00pm</button>
+	  
+	  
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv friday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="halloween.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  
+	  <p><div style="text-align:justify; font-size: 20px;">Friday 03.12.2021</div>
+      <button class="b1">4:30pm</button>
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	  
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+
+<div class="filterDiv thursday friday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="eternals.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Thursday 02.12.2021</div>
+      <button class="b1">5:30pm</button>
+	  
+	  <button class="b1">9:00pm</button>
+	  <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Friday 03.12.2021</div>
+     
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	 
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv saturday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="soho.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Saturday 04.12.2021</div>
+
+	  <button class="b1">9:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv monday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="antlers.jpg">
+    </div>
+    <div class="column-66">
+      <br>
+	  <p><div style="text-align:justify; font-size: 20px;">Monday 29.11.2021</div>
+      
+	  <button class="b1">5:00pm</button>
+	  
+    </div>
+  </div>
+  
+  </div>
+
+
+<div class="filterDiv wednesday">
+
+  <div class="rrow">
+    <div class="column-33">
+	<br>
+      <img src="monster.jpg">
+    </div>
+    <div class="column-66">
+     <br>
+	 <p><div style="text-align:justify; font-size: 20px;">Wednesday 01.12.2021</div>
+      
+	  <button class="b1">6:00pm</button>
+	  <button class="b1">7:30pm</button>
+	  <button class="b1">9:00pm</button>
+	 
+    </div>
+  </div>
+  
+  </div>
+</div>
+
+<button class=scrollToTopBtn>&#8648;</button>
+
+<div style="box-shadow: 0px -1px 10px white;"><footer>
+
+<div class="row">
+  <div class="column" style="background-color:black;">
+    <p>Tel.: 0725 089 123</p>
+	<p>E-mail: home.cinema@gmail.com</p>
+	
+  </div>
+  <div class="column" style="background-color:black;">
+    <p>The cinema is open everyday from 10:00 to 22:00.</p>
+	<p>Address: Piata Consiliul Europei 2, Timisoara, Romania</p>
+  </div>
+  <div class="column" style="background-color:black;">
+   
+	<p>If you want to be part of our team send an e-mail at: </p>
+	<p>home.cinema@gmail.com</p>
+  </div>
+</div>
+
+</footer></div>
+
+</div>
+
+<script type="text/javascript" src="scrolltotop.js"></script>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+</body>

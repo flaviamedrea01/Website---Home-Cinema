@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Movies </title>
+<link rel="icon" href="icon.png" sizes="256x256" type="image/png"> 
+
+<link href="style.css" rel="stylesheet" type="text/css">
+<link href="flipcard.css" rel="stylesheet" type="text/css">
+
+<style>
+/* Filter buttons from movies.html */
+body{ background-color: black;
+color: white;
+}
+
+.container {
+  margin-top: 80px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 50px;
+  overflow: hidden;
+}
+
+.filterDiv {
+  float: left; 
+  color: #ffffff;
+  width: 250px; 
+  height: 320px; 
+  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  display: none;
+  text-align: center;
+}
+
+.show {
+  display: block;
+}
+
+.btn {
+  font-family: georgia, serif;
+  font-size: 15px;
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+
+.button1 {
+  font-family: georgia, serif;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: black; 
+  border: 0.25px solid white;
+  box-shadow: 4px 4px 5px red;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button1 span:after {
+  content: '\276F\276F';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button1:hover span {
+  padding-right: 25px;
+}
+
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* Rows and columns for movies.html */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+ 
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
+</style>
+</head>
+
+<body>
+
+<div id="navbar">
+  <a href="#home"><a href='index.html' title='Home'>Home</a></a>
+  <a href="#movies"><a href='movies.html' title='Movies'>Movies</a></a>
+  <a href="#upcomingmovies"><a href='upcomingmovies.html' title='Upcoming Movies'>Upcoming Movies</a></a>
+  <a href="#schedule"><a href='schedule.html' title='Schedule'>Schedule</a></a>
+  <a href="#booking"><a href='makeareservation.php' title='Make a reservation'>Make a reservation</a></a>
+ </div>
+<br>
+<br>
+<br>
+<br>
+<h1><pers1><div style="text-align:center; font-size: 50pt;">Airing Movies</div></pers1></h1> 
+
+
+<br>
+<br>
+<div class="container">
+<div id="myBtnContainer">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('horror')"> Horror</button>
+  <button class="btn" onclick="filterSelection('thriller')"> Thriller</button>
+  <button class="btn" onclick="filterSelection('action')"> Action</button>
+  <button class="btn" onclick="filterSelection('drama')"> Drama</button>
+  <button class="btn" onclick="filterSelection('animation')"> Animation</button>
+  <button class="btn" onclick="filterSelection('comedy')"> Comedy</button>
+  <button class="btn" onclick="filterSelection('adventure')"> Adventure</button>
+  <button class="btn" onclick="filterSelection('sci-fi')"> Sci-fi</button>
+</div>
+</div>
+
+
+
+<div class="container">
+  <div class="filterDiv animation comedy adventure">
+  
+  <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="luca.jpg" alt="Luca" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+	  <p><div style="font-size: 20pt;">Luca</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Animation, Comedy, Adventure
+	  Time: 1h 35min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">On the Italian Riviera, an unlikely but strong friendship grows between a human being and a sea monster disguised as a human.</div></p>
+      <br><br><br>
+	  
+	  <button class="button1" ><span><a href='https://www.youtube.com/embed/0hgHY9k-44U' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>
+    </div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv colors fruits">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="bossbaby.jpg" alt="The Boss Baby: Family Business" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">The Boss Baby: Family Business</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Animation, Comedy, Adventure
+	  Time: 1h 47min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">The Templeton brothers have become adults and drifted away from each other, but a new boss baby with a cutting-edge approach is about to bring them together again - and inspire a new family business.</div></p>
+  <button class="button1" ><span><a href='https://www.youtube.com/embed/h45V1RXrKqE' title='Watch trailer' style='color:white'>Watch trailer </a></span></button>
+   </div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv action adventure thriller">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="notimetodie.jpg" alt="No Time To Die" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">No Time To Die</div></p> 
+      <p style="font-size: 10pt;">Genre: Action, Adventure, Thriller
+	    <br>Time: 2h 43min</p> 
+     	 <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">James Bond has left active service. His peace is short-lived when Felix Leiter, an old friend from the CIA, turns up asking for help, leading Bond onto the trail of a mysterious villain armed with dangerous new technology.</div></p>
+    <br>
+	<button class="button1" ><span><a href='https://www.youtube.com/embed/BIhNsAtPbPI' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>
+	</div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv animation adventure comedy">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="addams.jpg" alt="The Addams Family 2" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">The Addams Family 2</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Animation, Adventure, Comedy
+	  Time: 1h 33min
+	 </div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">The Addams get tangled up in more wacky adventures and find themselves involved in hilarious run-ins with all sorts of unsuspecting characters. Sequel to the 2019 animated film, 'The Addams Family'.</div></p>
+    <br><button class="button1" ><span><a href='https://www.youtube.com/embed/Kd82bSBDE84' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>
+	</div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv drama">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="persian.jpg" alt="Persian Lessons" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">Persian Lessons</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Drama
+	  <br>Time: 2h 7min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">A young Jewish man pretends to be Iranian to avoid being executed in a concentration camp.</div></p>
+    <br><br><br><br><br><button class="button1" ><span><a href='https://www.youtube.com/embed/5FdRKMQMj4o' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>
+	</div>
+  </div>
+</div>
+  
+  
+  </div>
+  <div class="filterDiv action adventure sci-fi">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="venom.jpg" alt="Venom: Let There Be Carnage" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p style="font-size:15pt;">Venom: Let There Be Carnage</p> 
+      <p style="font-size:10pt;">Genre: Action, Adventure, Sci-fi<br>
+	  Time: 1h 37min
+	  </p> 
+	  <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">Eddie Brock attempts to reignite his career by interviewing serial killer Cletus Kasady, who becomes the host of the symbiote Carnage and escapes prison after a failed execution.</div></p>
+    <br><button class="button1" ><span><a href='https://www.youtube.com/embed/-ezfi6FQ8Ds' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>
+	</div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv action drama">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="duel.jpg" alt="The Last Duel" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">The Last Duel</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Action, Drama<br>
+	  Time: 2h 32min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">King Charles VI declares that Knight Jean de Carrouges settle his dispute with his squire by challenging him to a duel.</div></p>
+<br><br><br><br><button class="button1" ><span><a href='https://www.youtube.com/embed/OTdr1Ik8SMc' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  
+  </div>
+  <div class="filterDiv drama">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ladder.jpg" alt="The Ladder" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">The Ladder</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Drama
+	  <br> Time: 2h 17min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">Based on true events, The Ladder follows the spiritual journey of Andrei, a sensitive, socially awkward young man who turns to acting in his search for true happiness.</div></p>
+<br><br><button class="button1" ><span><a href='https://www.youtube.com/embed/r0vDYNnCvnM' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv action adventure drama">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="dune.jpg" alt="Dune" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">Dune</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Action, Adventure, Drama<br>
+	  Time: 2h 35min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">Feature adaptation of Frank Herbert's science fiction novel, about the son of a noble family entrusted with the protection of the most valuable asset and most vital element in the galaxy.</div></p>
+<br><br><button class="button1" ><span><a href='https://www.youtube.com/embed/8g18jFHCLXk' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  
+  </div>
+  <div class="filterDiv animation adventure comedy">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="ron.jpeg" alt="Ron's Gone Wrong" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p><div style="font-size: 15pt;">Ron's Gone Wrong</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Animation, Adventure, Comedy
+	  Time: 1h 46min</div></p> 
+	  <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">The story of Barney, an awkward middle-schooler and Ron, his new walking, talking, digitally-connected device. Ron's malfunctions set against the backdrop of the social media age launch them on a journey to learn about true friendship.</div></p>
+    <button class="button1" ><span><a href='https://www.youtube.com/embed/8I8nMtzN05s' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>
+	</div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv horror thriller">
+  
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="halloween.jpg" alt="Halloween Kills" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">Halloween Kills</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Horror, Thriller<br>
+	  Time: 1h 45min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">The saga of Michael Myers and Laurie Strode continues in the next thrilling chapter of the Halloween series.</div></p>
+<br><br><br><br><button class="button1" ><span><a href='https://www.youtube.com/embed/hL6R3HmQfPc' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  </div>
+  <div class="filterDiv action adventure drama">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="eternals.jpg" alt="Eternals" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p><div style="font-size: 15pt;">Eternals</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Action, Adventure, Drama<br>
+	  Time: 2h 37min</div></p> 
+	  <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">The saga of the Eternals, a race of immortal beings who lived on Earth and shaped its history and civilizations.</div></p>
+<br><br><br><br><button class="button1" ><span><a href='https://www.youtube.com/embed/0WVDKZJkGlY' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  
+  </div>
+  <div class="filterDiv drama horror">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="soho.jpg" alt="Last Night in Soho" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p><div style="font-size: 15pt;">Last Night in Soho</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Drama, Horror<br>
+	  Time: 1h 56min</div></p> 
+	  <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">An aspiring fashion designer is mysteriously able to enter the 1960s where she encounters a dazzling wannabe singer. But the glamour is not all it appears to be and the dreams of the past start to crack and splinter into something darker.</div></p>
+<button class="button1" ><span><a href='https://www.youtube.com/embed/AcVnFrxjPjI' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  </div>
+  
+  
+  <div class="filterDiv drama horror">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="antlers.jpg" alt="Antlers" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      
+      <p><div style="font-size: 15pt;">Antlers</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Drama, Horror<br>
+	  Time: 1h 39min</div></p> 
+	  <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">In an isolated Oregon town, a middle-school teacher and her sheriff brother become embroiled with her enigmatic student, whose dark secrets lead to terrifying encounters with a asexual ancestral creature who came on them before.</div></p>
+<br><button class="button1" ><span><a href='https://www.youtube.com/embed/ng5eyOfL8qM' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  </div>
+  
+  
+  <div class="filterDiv animation adventure comedy">
+  
+   <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="monster.jpg" alt="Monster Family 2" style="width:250px;height:320px;">
+    </div>
+    <div class="flip-card-back">
+      <p><div style="font-size: 15pt;">Monster Family 2</div></p> 
+      <p><div style="font-size: 10pt;">Genre: Animation, Adventure, Comedy
+	  Time: 1h 43min</div></p> 
+      <p><div style="text-align:justify; margin-left: 10px; margin-right: 10px; text-indent: 15px; font-size: 11pt;">To free Baba Yaga and Renfield from the clutches of Monster Hunter Mila Starr, the Wishbone Family once more transforms into a Vampire, Frankenstein's Monster, a Mummy and a Werewolf.</div></p>
+<br><button class="button1" ><span><a href='https://www.youtube.com/embed/sXYu6Cnb5Z4' title='Watch trailer' style='color:white'>Watch trailer  </a></span></button>   
+   </div>
+  </div>
+</div>
+  
+  </div>
+  
+</div>
+
+
+
+
+
+
+
+<button class="scrollToTopBtn">&#8648;</button>
+<div style="box-shadow: 0px -1px 10px white;"><footer>
+
+<div class="row">
+  <div class="column" style="background-color:black;">
+    <p>Tel.: 0725 089 123</p>
+	<p>E-mail: home.cinema@gmail.com</p>
+	
+  </div>
+  <div class="column" style="background-color:black;">
+    <p>The cinema is open everyday from 10:00 to 22:00.</p>
+	<p>Address: Piata Consiliul Europei 2, Timisoara, Romania</p>
+  </div>
+  <div class="column" style="background-color:black;">
+   
+	<p>If you want to be part of our team send an e-mail at: </p>
+	<p>home.cinema@gmail.com</p>
+  </div>
+</div>
+
+</footer></div>
+
+
+<script type="text/javascript" src="scrolltotop.js"></script>
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("filterDiv");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+
+
+
+</body>
